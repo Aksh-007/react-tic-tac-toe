@@ -15,7 +15,12 @@ const GameStructure = () => {
   const [winMessage, setWinMessage] = useState("");
 
   const reloadGame = () => {
-    //
+    //in this function we are reloading the game 
+    // so reloading means fixing the state back into original/default position 
+    setIsCross (false);
+    setWinMessage("");
+    itemArray.fill("empty", 0, 9);
+
   }
 
   const checkWinner = () => {
