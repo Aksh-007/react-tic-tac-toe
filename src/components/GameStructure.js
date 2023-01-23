@@ -25,52 +25,52 @@ const GameStructure = () => {
         if (
             itemArray[0] !== 'empty' &&
             itemArray[0] === itemArray[1] &&
-            itemArray[1] === itemArray[2] 
+            itemArray[1] === itemArray[2]
         ) {
             setWinMessage(`${itemArray[0]} won`)
         } else if (
-            itemArray[3] !== 'empty'&&
+            itemArray[3] !== 'empty' &&
             itemArray[3] === itemArray[4] &&
-            itemArray[4] === itemArray[5] 
+            itemArray[4] === itemArray[5]
         ) {
-            setWinMessage  (`${itemArray[3]}won`)
+            setWinMessage(`${itemArray[3]}won`)
         } else if (
-            itemArray[6] !== 'empty'&&
+            itemArray[6] !== 'empty' &&
             itemArray[6] === itemArray[7] &&
-            itemArray[7] === itemArray[8] 
+            itemArray[7] === itemArray[8]
         ) {
-            setWinMessage (`${itemArray[6]}won`)
-        }else if (
-            itemArray[0] !== 'empty'  &&
+            setWinMessage(`${itemArray[6]}won`)
+        } else if (
+            itemArray[0] !== 'empty' &&
             itemArray[0] === itemArray[4] &&
-            itemArray[4] === itemArray[8] 
+            itemArray[4] === itemArray[8]
         ) {
-            setWinMessage  (`${itemArray[0]}won`)
-        }else if (
+            setWinMessage(`${itemArray[0]}won`)
+        } else if (
             itemArray[6] !== 'empty' &&
             itemArray[6] === itemArray[4] &&
             itemArray[4] === itemArray[2]
         ) {
-            setWinMessage  (`${itemArray[6]}won`)
+            setWinMessage(`${itemArray[6]}won`)
         }
         else if (
             itemArray[0] !== 'empty' &&
             itemArray[0] === itemArray[3] &&
             itemArray[3] === itemArray[6]
         ) {
-            setWinMessage  (`${itemArray[0]}won`)
-        }else if (
+            setWinMessage(`${itemArray[0]}won`)
+        } else if (
             itemArray[1] !== 'empty' &&
             itemArray[1] === itemArray[4] &&
             itemArray[4] === itemArray[7]
         ) {
-            setWinMessage  (`${itemArray[1]}won`)
-        }else if (
+            setWinMessage(`${itemArray[1]}won`)
+        } else if (
             itemArray[2] !== 'empty' &&
             itemArray[2] === itemArray[5] &&
             itemArray[5] === itemArray[8]
         ) {
-            setWinMessage  (`${itemArray[2]}won`)
+            setWinMessage(`${itemArray[2]}won`)
         }
 
     }
@@ -100,15 +100,15 @@ const GameStructure = () => {
                             <h1 className="text-success text-uppercase text-center">
                                 {winMessage}
                             </h1>
-                            <Button color="success" block onClick={reloadGame}>
-                                Reload the game
-                            </Button>
                         </div>
                     ) : (
                         <h1 className="text-center text-warning">
                             {isCross ? "Cross" : "Circle"} turns
                         </h1>
                     )}
+                    <Button color="success mb-3" block onClick={reloadGame}>
+                        Reload the game
+                    </Button>
                     <div className="grid">
                         {itemArray.map((item, index) => (
                             <Card color="warning" onClick={() => changeItem(index)}>
