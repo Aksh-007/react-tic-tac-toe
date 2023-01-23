@@ -1,5 +1,5 @@
-import './App.css';
 import GameStructure from './components/GameStructure';
+import './App.css';
 
 
 const App = () => {
